@@ -62,7 +62,7 @@ class TextTheme {
 
   static TextStyle bigTitleSemiBold = TextStyle(
       fontFamily: "pop",
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       fontSize: 26,
       color: Colors.black);
 
