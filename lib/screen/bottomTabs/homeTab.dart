@@ -14,24 +14,31 @@ class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: AppTheme.Colors.white,
-        brightness: Brightness.light,
-        actions: <Widget>[
-          Icon(
-            EvilIcons.getIconData("search"),
-            color: AppTheme.Colors.black,
+        body: NestedScrollView(
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+        return <Widget>[
+          new SliverAppBar(
+            floating: true,
+            elevation: 0,
+            snap: true,
+            backgroundColor: AppTheme.Colors.white,
+            brightness: Brightness.light,
+            actions: <Widget>[
+              Icon(
+                EvilIcons.getIconData("search"),
+                color: AppTheme.Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Icon(
+                  Icons.sort,
+                  color: AppTheme.Colors.black,
+                ),
+              )
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Icon(
-              Icons.sort,
-              color: AppTheme.Colors.black,
-            ),
-          )
-        ],
-      ),
+        ];
+      },
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -170,6 +177,6 @@ class _HomeTabState extends State<HomeTab> {
           ],
         ),
       ),
-    );
+    ));
   }
 }
