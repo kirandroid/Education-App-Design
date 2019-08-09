@@ -10,6 +10,7 @@ class Colors {
   static const Color black = const Color(0xFF000000);
   static const Color grayOne = const Color(0xFFEEEEEE);
   static const Color grayTwo = const Color(0xFFDDDDDD);
+  static const Color grayThree = const Color(0xFFB1B1B1);
   static const Color mediumGray = const Color(0xFF888888);
   static Color textDarkGray = Color.fromRGBO(51, 51, 51, 0.75);
   static const Color darkGray = const Color(0xFF777777);
@@ -34,6 +35,13 @@ class TextTheme {
       fontSize: 14,
       color: Colors.white);
 
+  static TextStyle regularTextBlack = TextStyle(
+      fontFamily: "pop",
+      fontWeight: FontWeight.w200,
+      fontSize: 16,
+      height: 1,
+      color: Colors.black);
+
   static TextStyle regularTextPurple = TextStyle(
       fontFamily: "pop",
       fontWeight: FontWeight.w400,
@@ -57,6 +65,18 @@ class TextTheme {
       fontWeight: FontWeight.w600,
       fontSize: 26,
       color: Colors.black);
+
+  static TextStyle titleSemiBoldPurple = TextStyle(
+      fontFamily: "pop",
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+      color: Colors.flatPurple);
+
+  static TextStyle titleRegularGray = TextStyle(
+      fontFamily: "pop",
+      fontWeight: FontWeight.w500,
+      fontSize: 20,
+      color: Colors.grayThree);
 
   static TextStyle titleRegularBlack = TextStyle(
       fontFamily: "pop",

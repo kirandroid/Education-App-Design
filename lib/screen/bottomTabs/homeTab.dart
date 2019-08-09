@@ -145,28 +145,28 @@ class _HomeTabState extends State<HomeTab> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30),
-              child: Container(
-                height: 200,
-                width: MediaQuery.of(context).size.width,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    HorizontalScrollCourseItem(
-                      courseImage: "https://picsum.photos/id/277/500/300",
-                      courseTitle: "Web Design",
-                    ),
-                    HorizontalScrollCourseItem(
-                      courseImage: "https://picsum.photos/id/216/500/300",
-                      courseTitle: "Marketing",
-                    ),
-                    HorizontalScrollCourseItem(
-                      courseImage: "https://picsum.photos/id/26/500/300",
-                      courseTitle: "Programming",
-                    ),
-                  ],
-                ),
+            Container(
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  HorizontalScrollCourseItem(
+                    courseImage: "https://picsum.photos/id/277/500/300",
+                    courseTitle: "Web Design",
+                  ),
+                  HorizontalScrollCourseItem(
+                    courseImage: "https://picsum.photos/id/216/500/300",
+                    courseTitle: "Marketing",
+                  ),
+                  HorizontalScrollCourseItem(
+                    courseImage: "https://picsum.photos/id/26/500/300",
+                    courseTitle: "Programming",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  )
+                ],
               ),
             )
           ],

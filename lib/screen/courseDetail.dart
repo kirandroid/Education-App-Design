@@ -1,3 +1,5 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:education_app/components/horizontalScrollCourseItem.dart';
 import 'package:education_app/components/toggleButton.dart';
 import 'package:flutter/material.dart';
 import 'package:education_app/utils/Theme.dart' as AppTheme;
@@ -66,6 +68,115 @@ class _CourseDetailState extends State<CourseDetail> {
       },
       body: Container(
         color: AppTheme.Colors.white,
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                      height: 200,
+                      child: Stack(
+                        children: <Widget>[
+                          CachedNetworkImage(
+                            imageUrl: "https://picsum.photos/id/216/500/300",
+                            placeholder: (context, url) => Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                            errorWidget: (context, url, error) =>
+                                Center(child: Icon(Icons.error)),
+                            imageBuilder: (context, imageProvider) => Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                  image: imageProvider,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              child: Icon(
+                                Icons.play_arrow,
+                                size: 40,
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.white, shape: BoxShape.circle),
+                            ),
+                          )
+                        ],
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          "Web Design",
+                          style: AppTheme.TextTheme.titleSemiBoldPurple,
+                        ),
+                        Text(
+                          "09:30",
+                          style: AppTheme.TextTheme.titleRegularGray,
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: Text(
+                      "The web design industry has been undergoing tremendous changes to meet the demand of users all over to have more access to content. Between mobile phones, tablets, and desktops, accessibility on the web is so easy.",
+                      style: AppTheme.TextTheme.regularTextBlack,
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30, bottom: 10),
+                    child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "Recent ",
+                            style: AppTheme.TextTheme.titleRegularBlack),
+                        TextSpan(
+                            text: "Courses",
+                            style: AppTheme.TextTheme.titleRegularOrange),
+                      ]),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  HorizontalScrollCourseItem(
+                    courseImage: "https://picsum.photos/id/277/500/300",
+                    courseTitle: "Web Design",
+                  ),
+                  HorizontalScrollCourseItem(
+                    courseImage: "https://picsum.photos/id/216/500/300",
+                    courseTitle: "Marketing",
+                  ),
+                  HorizontalScrollCourseItem(
+                    courseImage: "https://picsum.photos/id/26/500/300",
+                    courseTitle: "Programming",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     ));
   }
