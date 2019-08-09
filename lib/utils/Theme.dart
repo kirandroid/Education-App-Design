@@ -40,6 +40,12 @@ class TextTheme {
       fontSize: 16,
       color: Colors.flatDeepPurple);
 
+  static TextStyle regularTextWhite = TextStyle(
+      fontFamily: "pop",
+      fontWeight: FontWeight.w400,
+      fontSize: 16,
+      color: Colors.white);
+
   static TextStyle bigTitleLight = TextStyle(
       fontFamily: "pop",
       fontWeight: FontWeight.w300,

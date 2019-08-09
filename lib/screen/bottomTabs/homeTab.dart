@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:education_app/components/homeCategoryItem.dart';
 import 'package:education_app/components/horizontalScrollCourseItem.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +79,6 @@ class _HomeTabState extends State<HomeTab> {
                                 secondaryColor: AppTheme.Colors.flatOrange,
                                 secondaryIcon: "lib/assets/images/flask.svg",
                                 secondaryIconHeight: 30,
-                                shadowColor: AppTheme.Colors.flatRed40,
                               )),
                         ),
                         Expanded(
@@ -93,7 +91,6 @@ class _HomeTabState extends State<HomeTab> {
                                 secondaryColor: AppTheme.Colors.flatDeepPurple,
                                 secondaryIcon: "lib/assets/images/dna.svg",
                                 secondaryIconHeight: 40,
-                                shadowColor: AppTheme.Colors.flatPurple40,
                               )),
                         ),
                       ],
@@ -114,7 +111,6 @@ class _HomeTabState extends State<HomeTab> {
                                 secondaryIcon:
                                     "lib/assets/images/microscope.svg",
                                 secondaryIconHeight: 30,
-                                shadowColor: AppTheme.Colors.flatDeepPurple40,
                               )),
                         ),
                         Expanded(
@@ -127,7 +123,6 @@ class _HomeTabState extends State<HomeTab> {
                                 secondaryColor: AppTheme.Colors.flatRed,
                                 secondaryIcon:
                                     "lib/assets/images/design-tool.svg",
-                                shadowColor: AppTheme.Colors.flatOrange40,
                                 secondaryIconHeight: 25,
                               )),
                         ),

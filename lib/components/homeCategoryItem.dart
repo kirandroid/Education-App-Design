@@ -9,7 +9,6 @@ class HomeCategoryItem extends StatefulWidget {
   Color secondaryColor;
   String secondaryIcon;
   double secondaryIconHeight;
-  Color shadowColor;
 
   HomeCategoryItem(
       {this.primaryColor,
@@ -17,7 +16,6 @@ class HomeCategoryItem extends StatefulWidget {
       this.primaryTitle,
       this.secondaryColor,
       this.secondaryIcon,
-      this.shadowColor,
       this.secondaryIconHeight});
 
   @override
@@ -31,7 +29,9 @@ class _HomeCategoryItemState extends State<HomeCategoryItem> {
       height: 100,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-            color: widget.shadowColor, blurRadius: 10, offset: Offset(0.0, 6))
+            color: widget.primaryColor.withOpacity(0.4),
+            blurRadius: 10,
+            offset: Offset(0.0, 6))
       ], color: widget.primaryColor, borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
