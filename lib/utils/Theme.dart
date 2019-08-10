@@ -11,19 +11,10 @@ class Colors {
   static const Color grayOne = const Color(0xFFEEEEEE);
   static const Color grayTwo = const Color(0xFFDDDDDD);
   static const Color grayThree = const Color(0xFFB1B1B1);
-  static const Color mediumGray = const Color(0xFF888888);
-  static Color textDarkGray = Color.fromRGBO(51, 51, 51, 0.75);
-  static const Color darkGray = const Color(0xFF777777);
-  static const Color darkerGray = const Color(0xFF454545);
-  static const Color blueGrey = const Color(0xFF8D92A3);
   static const Color flatRed = const Color(0xFFF96133);
   static const Color flatOrange = const Color(0xFFFF9233);
   static const Color flatPurple = const Color(0xFF8E3DD1);
   static const Color flatDeepPurple = const Color(0xFF462066);
-  static const Color flatRed40 = const Color(0x66F96133);
-  static const Color flatOrange40 = const Color(0x66FF9233);
-  static const Color flatPurple40 = const Color(0x668E3DD1);
-  static const Color flatDeepPurple40 = const Color(0x66462066);
 }
 
 class TextTheme {

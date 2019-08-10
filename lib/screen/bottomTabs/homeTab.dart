@@ -23,17 +23,16 @@ class _HomeTabState extends State<HomeTab> {
             backgroundColor: AppTheme.Colors.white,
             brightness: Brightness.light,
             actions: <Widget>[
-              Icon(
-                EvilIcons.getIconData("search"),
+              IconButton(
+                icon: Icon(EvilIcons.getIconData("search")),
                 color: AppTheme.Colors.black,
+                onPressed: () {},
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(
-                  Icons.sort,
-                  color: AppTheme.Colors.black,
-                ),
-              )
+              IconButton(
+                icon: Icon(Icons.sort),
+                color: AppTheme.Colors.black,
+                onPressed: () {},
+              ),
             ],
           ),
         ];

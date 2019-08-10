@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class PlaceholderTab extends StatefulWidget {
-  String title;
-  PlaceholderTab({this.title});
+  String icon;
+  PlaceholderTab({this.icon});
 
   @override
   _PlaceholderTabState createState() => _PlaceholderTabState();
@@ -13,7 +14,11 @@ class _PlaceholderTabState extends State<PlaceholderTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(widget.title),
+        child: SvgPicture.asset(
+          widget.icon,
+          height: 50,
+          width: 50,
+        ),
       ),
     );
   }

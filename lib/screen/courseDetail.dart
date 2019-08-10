@@ -28,7 +28,7 @@ class _CourseDetailState extends State<CourseDetail> {
                 child: Row(
                   children: <Widget>[
                     Container(
-                      width: 50,
+                      width: 40,
                       child: IconButton(
                         icon: Icon(SimpleLineIcons.getIconData("arrow-left")),
                         color: AppTheme.Colors.black,
@@ -99,14 +99,25 @@ class _CourseDetailState extends State<CourseDetail> {
                           Align(
                             alignment: Alignment.center,
                             child: Container(
-                              height: 50,
-                              width: 50,
-                              child: Icon(
-                                Icons.play_arrow,
-                                size: 40,
-                              ),
                               decoration: BoxDecoration(
                                   color: Colors.white, shape: BoxShape.circle),
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: InkWell(
+                                  radius: 25,
+                                  borderRadius: BorderRadius.circular(25),
+                                  highlightColor: AppTheme.Colors.flatOrange,
+                                  onTap: () {},
+                                  child: Container(
+                                    height: 50,
+                                    width: 50,
+                                    child: Icon(
+                                      Icons.play_arrow,
+                                      size: 40,
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ),
                           )
                         ],
